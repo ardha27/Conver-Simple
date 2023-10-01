@@ -3,16 +3,16 @@ from conver_utils.infer import voice_change
 
 def main():
     parser = argparse.ArgumentParser(description='Change voice using specified parameters')
-    parser.add_argument('--voice_model', type=str, required=True, help='Name of the voice model')
-    parser.add_argument('--main_vocals', type=str, required=True, help='Path to the main vocals audio file')
-    parser.add_argument('--ai_vocals_path', type=str, required=True, help='Path to save the AI-generated vocals audio file')
-    parser.add_argument('--pitch_change', type=int, required=True, help='Pitch change value')
-    parser.add_argument('--f0_method', type=str, required=True, help='F0 method')
-    parser.add_argument('--index_rate', type=float, required=True, help='Index rate')
-    parser.add_argument('--filter_radius', type=int, required=True, help='Filter radius')
-    parser.add_argument('--rms_mix_rate', type=float, required=True, help='RMS mix rate')
-    parser.add_argument('--protect', type=float, required=True, help='Protect value')
-    parser.add_argument('--crepe_hop_length', type=int, required=True, help='Crepe hop length')
+    parser.add_argument('--voice_model', '-vm', type=str, required=True, help='Voice model name')
+    parser.add_argument('--main_vocals', '-mv', type=str, required=True, help='Main vocals audio file path')
+    parser.add_argument('--ai_vocals_path', '-ap', type=str, required=True, help='AI-generated vocals audio file path')
+    parser.add_argument('--pitch_change', '-pc', type=int, required=True, help='Pitch change value')
+    parser.add_argument('--f0_method', '-f0', type=str, required=True, help='F0 method')
+    parser.add_argument('--index_rate', '-ir', type=float, required=True, help='Index rate')
+    parser.add_argument('--filter_radius', '-fr', type=int, required=True, help='Filter radius')
+    parser.add_argument('--rms_mix_rate', '-rmr', type=float, required=True, help='RMS mix rate')
+    parser.add_argument('--protect', '-p', type=float, required=True, help='Protect value')
+    parser.add_argument('--crepe_hop_length', '-chl', type=int, required=True, help='Crepe hop length')
 
     args = parser.parse_args()
 
